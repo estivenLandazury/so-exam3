@@ -8,7 +8,21 @@ def client():
   return client
 
 def test_get_cpu_percent(mocker, client):
-  mocker.patch.object(Stats, 'get_cpu_percent', return_value=100)
-  response = client.get('/v1/stats/cpu')
+  mocker.patch.object(Stats, 'cpuPercent', return_value=100)
+  response = client.get('/cpu')
   assert response.data.decode('utf-8') == '{"cpu_percent": 100}'
-  assert response.status_code == 200
+  assert response.status_code == 200 
+
+
+
+def test_get_ram_info(mocker, client):
+  mocker.patch.object(Stats, 'ram' , return_value=100)
+  response = client.get('/ram')
+  assert response.data.decode('utf-8') == '{"ram_info": 100}'
+  assert response.status_code ==200 
+
+def test_get_disk_info(mocker, client):
+  mocker.patch.object(Stats, 'disk' , return_value=100)
+  response = client.get('/disk')
+  assert response.data.decode('utf-8') == '{"disk_info": 100}'
+  assert response.status_code ==200

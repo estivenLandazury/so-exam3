@@ -1,6 +1,6 @@
 from flask import Flask
 import json
-fromi opt_stats.stats import Stats
+from op_stats.stats import Stats
 
 app = Flask(__name__)
 
