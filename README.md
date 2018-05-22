@@ -172,7 +172,9 @@ Primero accedemos a travis a travez de https://travis-ci.org/ e iniciamos sesió
 
 ![](Imagenes/pantallazoTravis1.png)  
 
-![](Imagenes/pantallazoTravis2.png) 
+![](Imagenes/pantallazoTravis2.png)   
+
+![](Imagenes/travisPullrequest.png)
 
 
 
